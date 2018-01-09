@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="DateCellSampleApp.Extensions.DateTimeCell"
+          x:Name="DateTimeCell">
+
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal" Padding="13, 0">
+            <Label Text="{Binding BindingContext.Label, Source={x:Reference DateTimeCell}}" 
+                   VerticalOptions="Center" />
+            
+            <DatePicker x:Name="_datePicker" 
+                        Date="{Binding BindingContext.DateTime, Source={x:Reference DateTimeCell}}" 
+                        HorizontalOptions="EndAndExpand" />
+            
+        </StackLayout>
+    </ViewCell.View>
+
+</ViewCell>
